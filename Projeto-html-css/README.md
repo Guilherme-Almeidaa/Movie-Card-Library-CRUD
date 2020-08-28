@@ -47,23 +47,3 @@ A página deve possuir um elemento aside
 A página deve possuir um elemento footer
 
 11 - Seu site deve passar sem problemas na verificação de semântica do site achecker
-Requisitos Bônus:
-12 - Adicione uma tabela à página
-A página deve possuir uma tabela
-13 - Brinque com o Box model!
-Altere margin, padding e border dos elementos para ver, na prática, como esses atributos influenciam e melhoram a visualização dos componentes
-14 - Altere atributos relacionados as fontes
-Altere o tamanho da letra
-
-Altere a cor da letra
-
-Altere o espaçamento entre as linhas
-
-Altere o font-family
-
-15 - Faça com que seu artigo e seção sobre aprendizados fiquem um ao lado do outro
-Utilizar a classe 'lado-esquerdo'
-
-Utilizar a classe 'lado-direito'
-
-Verificar se os elementos com as classes lado-direito e lado-esquerdo estão posicionados corretamente
