@@ -9,7 +9,7 @@ class Wallet extends React.Component {
  
   render() {
     return (
-      <div className="header-complete"  >
+      <div className='header-complete'  >
       <HeaderWallet />
       <FormDespesas />
       <TableInfo/>
