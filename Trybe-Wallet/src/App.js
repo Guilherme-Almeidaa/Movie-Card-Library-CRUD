@@ -7,13 +7,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <section class="hero is-primary all">
-          <div class="hero-body">
-            <div class="container">
-              <h1 class="title">
+        <section className="hero is-primary all">
+          <div className="hero-body">
+            <div className="container cont-title">
+              <h1 className="title">
                 Hello, TrybeWallet!
       </h1>
-              <h2 class="subtitle">
+              <h2 className="subtitle">
                 Wallet
       </h2>
             </div>

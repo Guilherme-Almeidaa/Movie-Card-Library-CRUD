@@ -43,7 +43,7 @@ class FormDespesas extends React.Component {
         const { sigleCurrence } = this.props
         const currenceFilter = Object.values(sigleCurrence).filter((item) => item.name !== 'Dólar Turismo')
         return (
-            <div>
+            
             <form className="form" >
                 
                 <label htmlFor="valor" >Valor:
@@ -79,10 +79,10 @@ class FormDespesas extends React.Component {
                         <option value="Saúde" >Saúde</option>
                     </select>
                 </label>
-                <button type="button" onClick={this.expenseSaved} >Adicionar</button>
+                <button className="button is-primary add" type="button" onClick={this.expenseSaved} >Adicionar</button>
             </form>
             
-            </div>
+            
         )
     }
 }

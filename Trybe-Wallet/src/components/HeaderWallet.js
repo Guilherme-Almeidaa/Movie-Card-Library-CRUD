@@ -28,9 +28,9 @@ class HeaderWallet extends React.Component {
         const convert = this.sumExpensesTotal().toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
         return (
-            <header >
+            <header className="notification is-info headerP" >
                 <div className="container">
-                    <div className="notification is-info headerP ">
+                    <div className="container-2">
                         <p data-testid="email-field" >Email:{email}</p>
                         <p data-testid="total-field" >Total: {convert}</p>
                         <p data-testid="header-currency-field" >BRL</p>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { sumExpense } from '../actions/index'
-
+import bitcoin from '../imgs/Bitcoin.png';
+import dolar from '../imgs/dolar.png';
+import euro from '../imgs/euro.png';
+import dolarCanadense from '../imgs/dolar-canadense.png';
 
 class TableInfo extends React.Component {
     constructor(props) {
@@ -33,10 +36,24 @@ class TableInfo extends React.Component {
 
     isSelected(e) {
 
-        if (e.target.className === 'is-selected') {
+        if (e.target.className === 'item-table is-selected') {
             e.target.className = ''
         } else {
-            e.target.className = 'is-selected'
+            e.target.className = 'item-table is-selected'
+        }
+    }
+
+    selectedImg(coin) {
+        if (coin === 'USD') {
+            return dolar
+        } else if (coin === 'EUR') {
+            return euro
+        } else if (coin === 'BTC') {
+            return bitcoin
+        } else if (coin === 'CAD') {
+            return dolarCanadense
+        } else {
+            return ''
         }
     }
 
@@ -45,7 +62,7 @@ class TableInfo extends React.Component {
 
         return (
 
-            <table className="table is-bordered" >
+            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" >
                 <thead>
                     <tr>
                         <td>Descrição</td>
@@ -63,19 +80,19 @@ class TableInfo extends React.Component {
                     const { currency, exchangeRates } = item
                     const convert = (exchangeRates[currency].ask * item.value).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
                     return (
-                        <tbody key={index} >
-                            <tr onClick={this.isSelected} >
+                        <tbody className="item-table" onClick={this.isSelected} key={index} >
+                            <tr  >
                                 <td>{item.description}</td>
                                 <td>{item.tag}</td>
                                 <td>{item.method}</td>
                                 <td>{item.value}</td>
-                                <td>{exchangeRates[currency].name}</td>
+                                <td><img className="img-coin" alt="moeda" src={this.selectedImg(exchangeRates[currency].code)} /> {exchangeRates[currency].name}</td>
                                 <td>{Number(exchangeRates[currency].ask).toFixed(2)}</td>
                                 <td>{convert}</td>
                                 <td>Real</td>
                                 <td>
-                                    <button class="delete is-small" type="button" onClick={() => this.deleteExpense(index)} ></button>
-                                    <button type="button">Editar</button>
+                                    <button className="edit button is-primary" type="button"></button>
+                                    <button className="delete button is-primary" type="button" onClick={() => this.deleteExpense(index)} ></button>
                                 </td>
                             </tr>
                         </tbody>
