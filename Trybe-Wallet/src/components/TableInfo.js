@@ -6,15 +6,19 @@ import dolar from '../imgs/dolar.png';
 import euro from '../imgs/euro.png';
 import dolarCanadense from '../imgs/dolar-canadense.png';
 
+
 class TableInfo extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             deleted: false,
+            edit:false
         }
 
         this.deleteExpense = this.deleteExpense.bind(this);
+        this.editExpense = this.editExpense.bind(this);
+        this.isSelected = this.isSelected.bind(this);
     }
 
 
@@ -43,7 +47,7 @@ class TableInfo extends React.Component {
         }
     }
 
-    selectedImg(coin) {
+    selectedImgCurrency(coin) {
         if (coin === 'USD') {
             return dolar
         } else if (coin === 'EUR') {
@@ -57,9 +61,19 @@ class TableInfo extends React.Component {
         }
     }
 
+    
+
+    editExpense () {
+        const {edit} = this.state
+        this.setState({
+            edit:!edit
+        })
+    }
+
     render() {
         const { expenses } = this.props
-
+        const moedas = ['USD' , 'EUR' , 'BTC' , 'CAD']
+        
         return (
 
             <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" >
@@ -80,19 +94,19 @@ class TableInfo extends React.Component {
                     const { currency, exchangeRates } = item
                     const convert = (exchangeRates[currency].ask * item.value).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
                     return (
-                        <tbody className="item-table" onClick={this.isSelected} key={index} >
-                            <tr  >
+                        <tbody  onClick={this.isSelected} key={index} >
+                            <tr className='item-table is-edit'  >
                                 <td>{item.description}</td>
                                 <td>{item.tag}</td>
                                 <td>{item.method}</td>
                                 <td>{item.value}</td>
-                                <td><img className="img-coin" alt="moeda" src={this.selectedImg(exchangeRates[currency].code)} /> {exchangeRates[currency].name}</td>
+                                <td>{moedas.includes(currency) ? <img className="img-coin" alt="moeda" src={this.selectedImgCurrency(exchangeRates[currency].code)} /> : ''} {exchangeRates[currency].name}</td>
                                 <td>{Number(exchangeRates[currency].ask).toFixed(2)}</td>
                                 <td>{convert}</td>
                                 <td>Real</td>
                                 <td>
-                                    <button className="edit button is-primary" type="button"></button>
-                                    <button className="delete button is-primary" type="button" onClick={() => this.deleteExpense(index)} ></button>
+                                    <button onClick={this.editExpense} className="edit button is-warning" type="button"></button>
+                                    <button className="delete- button is-danger" type="button" onClick={() => this.deleteExpense(index)} >X</button>
                                 </td>
                             </tr>
                         </tbody>

@@ -983,6 +983,22 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
   color: #fff;
 }
 
+.edit {
+  height: 20px;
+  margin: 2px;
+  background-color: #c9aa20;
+  border-color: transparent;
+  color: #fff;
+ 
+}
+
+.delete- {
+  height: 20px;
+  margin:2px;
+  width: 20px;
+}
+
+
 .button.is-primary:hover, .button.is-primary.is-hovered {
   background-color: #3298dc;
   border-color: transparent;
@@ -11659,16 +11675,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     justify-content: space-between;
   }
 
-.edit {
-  height: 20px;
-  margin: 2px;
- 
-}
-
-.delete {
-  height: 20px;
-  margin:2px;
-}
 
 .container-2 {
   display: flex;
@@ -11692,6 +11698,28 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   width: 20px;
   height: 20px;
 }
+.img-coin-2 {
+  width: 35px;
+  height: 35px;
+}
+
+.is-edit {
+  background-color:#3298dc ;
+}
+
+.total {
+  font-size: larger;
+}
+
+.img-coin-3 {
+  width: 30px;
+  height: 30px;
+}
+
+.divs-selected {
+  display: flex;
+}
+
 
  
 /*# sourceMappingURL=bulma.css.map */
