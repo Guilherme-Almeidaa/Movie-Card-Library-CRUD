@@ -32,7 +32,7 @@ class HeaderWallet extends React.Component {
                 <div className="container">
                     <div className="container-2">
                         <p data-testid="email-field" >Email:{email}</p>
-                        <p data-testid="total-field" >Total: {convert}</p>
+                        <p className="total" data-testid="total-field" >Total: {convert}</p>
                         <p data-testid="header-currency-field" >BRL</p>
                     </div>
                 </div>
