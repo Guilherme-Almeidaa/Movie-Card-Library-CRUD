@@ -1,0 +1,52 @@
+.age {
+  color:rgb(86, 202, 86)
+}
+
+.ck {
+  color: orange;
+}
+
+img {
+  border-radius: 200px;
+}
+
+button {
+  border-radius: 200px;
+  width: 300px;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(115, 116, 111);
+  border-radius: 30px;
+  width: 300px;
+}
+
+.infoPerson {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jut {
+  padding: 2px;
+}
+
+.arena {
+  height: 150px;
+}
+
+.img-arena {
+  width: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.comp {
+  padding: 5px;
+}
