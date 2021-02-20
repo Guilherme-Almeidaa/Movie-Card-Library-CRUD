@@ -1,0 +1,270 @@
+.card-info {
+    background-color: rgb(182, 178, 178);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info:hover {
+    background-color: rgb(235, 101, 101);
+    width: 320px;
+    height: 320px;
+    transition: 0.7s;
+}
+
+
+.input-info-values {
+    padding: 5px;
+   
+}
+
+p {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    color: black;
+}
+
+.form-primary {
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner-name {
+    text-align: center;
+}
+
+.search {
+    background-color: rgb(122, 122, 216);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vh;
+}
+
+.header {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-search {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.container-principal {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   
+}
+
+.tables {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.ryus-title-card {
+    display: flex;
+    justify-content: center;
+}
+
+.red {
+    border-color: red;
+    border-radius:10px;
+    height: 30px;
+}
+
+.inputs-info {
+
+    border-radius:10px;
+    height: 30px;
+
+}
+
+.contaner-total {
+    width: 100%;
+}
+
+.card-info-details {
+    background-color: rgb(182, 178, 178);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+
+}
+
+.buttons-header {
+    padding: 5px;
+}
+
+.containe-search {
+    display: flex;
+    justify-content: center;
+}
+
+.img-previus {
+    width: 200px;
+    
+    border-radius: 300px;
+}
+
+.container-img-previus {
+    display: flex;
+    justify-content: center;
+}
+
+.images-person {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+.container-img-person {
+    display: flex;
+    justify-content: center;
+}
+
+.form-initial {
+    display: flex;
+    justify-content: center;
+}
+
+.images-person-details {
+    width: 300px;
+    border-radius: 100px;
+}
+
+.buttons-card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-title {
+    font-size: x-large;
+    color:black;
+    
+}
+.ryus {
+    font-size: x-large;
+}
+
+.uploadImage {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.container-initial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.confirm-edit {
+    padding: 5px;
+}
+
+@media only screen and (max-width : 700px) {
+
+    .card-info {
+        background-color: rgb(182, 178, 178);
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+        width: 150px;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .images-person {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    .card-title {
+        font-size: medium;
+        color:black;
+        
+    }
+    .ryus {
+        font-size: x-small;
+    }
+
+    .container-principal {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: space-around;
+    }
+
+    .card-info:hover {
+        background-color: rgb(235, 101, 101);
+        width: 180px;
+        height: 170px;
+        transition: 0.7s;
+        
+    }
+
+    .search {
+        background-color: rgb(122, 122, 216);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 300px;
+    }
+
+    .input-search {
+        border-radius: 5px;
+        height: 30px;
+        width: 100px;
+    }
+
+    .images-person-details  {
+        width: 100px;
+    }
+
+    .input-info-values {
+        padding: 5px;
+        width: 200px;
+        display: flex;
+       
+    }
+    
+    .inputs-info {
+        width: 100px;
+    }
+
+    .upload-images {
+        width: 150px;
+    }
+
+    .card-info-details {
+        width: 340px;
+    }
+}

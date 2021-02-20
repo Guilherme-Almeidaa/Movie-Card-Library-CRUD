@@ -1,52 +1,38 @@
-.age {
-  color:rgb(86, 202, 86)
+.App {
+  text-align: center;
 }
 
-.ck {
-  color: orange;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-img {
-  border-radius: 200px;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-button {
-  border-radius: 200px;
-  width: 300px;
-}
-
-.person {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(115, 116, 111);
-  border-radius: 30px;
-  width: 300px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.infoPerson {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.App-link {
+  color: #61dafb;
 }
 
-.jut {
-  padding: 2px;
-}
-
-.arena {
-  height: 150px;
-}
-
-.img-arena {
-  width: 100px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.comp {
-  padding: 5px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

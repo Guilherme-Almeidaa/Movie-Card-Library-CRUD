@@ -1,12 +1,13 @@
-import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Arena from './pages/arena';
+import Routes from './routes'
+import './css/bulma.min.css';
+import Provider from './context/Provider';
+import './css/infoRyusPerson.css';
 
 function App() {
   return (
-   <BrowserRouter>
-    <Arena/>
-   </BrowserRouter>
+    <Provider>
+    <Routes />
+    </Provider>
   );
 }
 
