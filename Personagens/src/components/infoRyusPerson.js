@@ -24,10 +24,7 @@ function InfoRyus() {
         return 0
     }
 
-   
-   
-
-    useEffect(() => {
+   useEffect(() => {
         setSearch('')
     },[setSearch])
    
