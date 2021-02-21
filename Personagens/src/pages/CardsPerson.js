@@ -173,7 +173,7 @@ function CardPerson ({match}) {
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th> Item ou Evento </th>
+                                            <th> Item/Evento </th>
                                             <th> Valor </th>
                                         </tr>
                                     </thead>
@@ -196,7 +196,7 @@ function CardPerson ({match}) {
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th> Item ou Evento </th>
+                                            <th> Item/Evento </th>
                                             <th> Valor </th>
                                         </tr>
                                     </thead>
