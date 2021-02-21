@@ -2,7 +2,7 @@ import React, {  useContext, useEffect } from 'react';
 import '../css/infoRyusPerson.css';
 import infoContext from '../context/infoContext';
 import {Link} from 'react-router-dom';
-
+import data from '../data'
 
 
 
@@ -24,6 +24,9 @@ function InfoRyus() {
         return 0
     }
 
+    useEffect(() => {
+        localStorage.setItem('data' , JSON.stringify(data))
+    },[])
    
 
     useEffect(() => {
