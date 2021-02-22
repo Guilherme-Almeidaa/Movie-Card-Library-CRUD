@@ -25,6 +25,15 @@
    
 }
 
+.ryus {
+    color: black;
+
+}
+
+.ryus-negative {
+    color:red;
+}
+
 p {
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -115,7 +124,7 @@ body {
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
-    width: 35%;
+    width: 37%;
 }
 
 .title {

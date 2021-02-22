@@ -49,7 +49,7 @@ function InfoRyus() {
                             <h2 className="card-title" >{info.name}</h2>
                         </div>
                         <div className="ryus-title-card">
-                            <p className="ryus" >${info.ryus}</p>
+                            <p className={info.ryus < 0 ? 'ryus ryus-negative' : 'ryus'} >${info.ryus}</p>
                         </div>
                          </div>
                     </Link>

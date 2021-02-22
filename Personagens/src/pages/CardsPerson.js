@@ -202,7 +202,7 @@ function CardPerson ({match}) {
                             <p className="title is-3" >{infoRyus[id].name}</p>
                         </div>
                         <div className="ryus-title-card">
-                            <p className="title is-4" >${infoRyus[id].ryus}</p>
+                            <p className={infoRyus[id].ryus < 0 ? 'ryus ryus-negative' : 'ryus'} >${infoRyus[id].ryus}</p>
                         </div>
               <div className="tables">
                             <div>
