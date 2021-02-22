@@ -91,9 +91,15 @@ function CardPerson ({match}) {
         if(spent === '' || itemSpent ==='') {
             showAlert('Dijite as informações')
         } else {
-        infoRyus[id].ryus =infoRyus[id].ryus - Number(spent);
-        const spentPerson = { id: 0, itemSpent: itemSpent, valueItemSpent: spent, }
+         
+        
+        const spentPerson = { id: 0, itemSpent: itemSpent, valueItemSpent: Number(spent), }
         infoRyus[id].spentItens.push(spentPerson)
+        const valuesGain = infoRyus[id].gainItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemGain } , 0)
+        const valueSpent =  infoRyus[id].spentItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemSpent } , 0)
+        
+        infoRyus[id].ryus = valuesGain - valueSpent
+        
         localStorage.setItem('data', JSON.stringify(datacheck))
         setStatus(!status);
         }
@@ -104,13 +110,20 @@ function CardPerson ({match}) {
         if(gain === '' || itemGain === '') {
           showAlert('Dijite as informações')
         } else {
-        infoRyus[id].ryus = infoRyus[id].ryus + Number(gain)
-        const gainPerson = { id: 0, itemGain: itemGain, valueItemGain: gain }
+
+        
+        const gainPerson = { id: 0, itemGain: itemGain, valueItemGain: Number(gain) }
         infoRyus[id].gainItens.push(gainPerson)
+        const valuesGain = infoRyus[id].gainItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemGain } , 0)
+        const valueSpent =  infoRyus[id].spentItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemSpent } , 0)
+        
+        infoRyus[id].ryus = valuesGain - valueSpent
+        
         localStorage.setItem('data', JSON.stringify(datacheck))
         setStatus(!status);
         }
     }
+
 
 
     const changeItemSpent = ({ target }) => {
@@ -146,11 +159,35 @@ function CardPerson ({match}) {
         const {value} = target;
         setDiretoryImage(value)
     }
+
+    const deleteItemGain = (index) => {
+        infoRyus[id].gainItens.splice(index ,1)
+        const valuesGain = infoRyus[id].gainItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemGain } , 0)
+        const valueSpent =  infoRyus[id].spentItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemSpent } , 0)
+        
+        infoRyus[id].ryus = valuesGain - valueSpent
+        localStorage.setItem('data', JSON.stringify(datacheck))
+        setStatus(!status)
+    }
+
+    const deleteItemSpent = (index) => {
+        infoRyus[id].spentItens.splice(index ,1)
+        const valuesGain = infoRyus[id].gainItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemGain } , 0)
+        const valueSpent =  infoRyus[id].spentItens.reduce((reducer ,acc) => {return  reducer + acc.valueItemSpent } , 0)
+        
+        infoRyus[id].ryus = valuesGain - valueSpent
+        
+        localStorage.setItem('data', JSON.stringify(datacheck))
+        setStatus(!status)
+    }
+    
+    
     
     
     if(infoRyus[id] === undefined) return <Redirect to="/infoperson" />
     
     return (
+        <div className="container-card-info-details" >
         
        <div className="card-info-details" >
            <div className="title" >
@@ -175,6 +212,7 @@ function CardPerson ({match}) {
                                         <tr>
                                             <th> Item/Evento </th>
                                             <th> Valor </th>
+                                            <th></th>
                                         </tr>
                                     </thead>
 
@@ -184,6 +222,7 @@ function CardPerson ({match}) {
                                                 <tr>
                                                     <td>{item.itemSpent}</td>
                                                     <td>{item.valueItemSpent}</td>
+                                                    <td><button className="button is-danger is-primary is-small" onClick={() => deleteItemSpent(index2)}>X</button></td>
                                                 </tr>
                                             </tbody>
                                         )
@@ -198,6 +237,7 @@ function CardPerson ({match}) {
                                         <tr>
                                             <th> Item/Evento </th>
                                             <th> Valor </th>
+                                            <th></th>
                                         </tr>
                                     </thead>
 
@@ -207,6 +247,7 @@ function CardPerson ({match}) {
                                                 <tr>
                                                     <td>{item.itemGain}</td>
                                                     <td>{item.valueItemGain}</td>
+                                                    <td><button className="button is-danger is-primary is-small" onClick={() => deleteItemGain(index2)}>X</button></td>
                                                 </tr>
                                             </tbody>
                                         )
@@ -269,6 +310,7 @@ function CardPerson ({match}) {
             </div>
            
                         </div>
+       </div>
        </div>
     )
 }

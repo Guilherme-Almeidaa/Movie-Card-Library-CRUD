@@ -34,7 +34,7 @@ function InitialPage() {
         const dataSaved = JSON.parse(localStorage.getItem('data')) || { infoRyus: [] };
         const {infoRyus} = dataSaved
         const lastPerson = infoRyus.length - 1
-        const saveNow = {id:lastPerson + 1, name, ryus: Number(dataRyus), spentItens:[] , gainItens:[] , img:diretoryImage };
+        const saveNow = {id:lastPerson + 1, name, ryus: Number(dataRyus), spentItens:[] , gainItens:[{ id: 0, itemGain: 'Valor inicial', valueItemGain: Number(dataRyus) }] , img:diretoryImage };
         localStorage.setItem('data', JSON.stringify({ ...dataSaved, infoRyus: [...infoRyus, saveNow] }))
         setDataRyus({ ...dataSaved, infoRyus: [...infoRyus, saveNow] })
         setDiretoryImage('')

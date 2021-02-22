@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import initialPage from '../pages/initialPage';
 import infoPerson from '../pages/infoPerson';
 import Header from '../components/Header';
-import CardPerson from '../pages/CardsPerson'
+import CardPerson from '../pages/CardsPerson';
+import Footer from '../components/Footer'
 
 function Routes() {
     return (
@@ -15,6 +16,7 @@ function Routes() {
                 <Route path="/infoperson" component={infoPerson} />
                 <Route path="/cardinfo/:id" render={ (props) => < CardPerson {...props} />}/>
             </Switch>
+            <Footer/>
         </BrowserRouter>
         </div>
     )
