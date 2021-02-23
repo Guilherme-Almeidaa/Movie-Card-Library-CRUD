@@ -57,27 +57,27 @@ function InitialPage() {
                 <div className="field form-initial" >
                 <label className="label" >Nome:</label>
                 <div className="control">
-              <input onChange={addName} type="text" />
+              <input data-testid="input-name-register" onChange={addName} type="text" />
               </div>
                 </div>
                 <div className="field form-initial" >
                 <label className="label" > Ryus: </label>
                 <div className="control" >
-                  <input placeholder={0} onChange={addRyus} type="number" />
+                  <input data-testid="input-ryos-register"  placeholder={0} onChange={addRyus} type="number" />
                   </div>
                   </div>
            <div></div>
         <div className="uploadImage" >
         <label>Insira o Link da imagem:</label>
-        <input onChange={uploadImageNet} type="text" />
+        <input data-testid="input-img-register" onChange={uploadImageNet} type="text" />
     </div>
             </form>
             <div  className="container-img-previus" >
-                <img hidden={diretoryImage !== '' ? '' : 'hidden' } className="img-previus" alt="previus" src = {imagePrevius} />
+                <img data-testid="img-previus" hidden={diretoryImage !== '' ? '' : 'hidden' } className="img-previus" alt="previus" src = {imagePrevius} />
             </div>
             <div  className="form-primary" >
 
-            <button className="button is-success" onClick={addInfo} >Adicionar</button>
+            <button data-testid="button-add"  className="button is-success" onClick={addInfo} >Adicionar</button>
             </div>
       
         </div>

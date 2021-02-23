@@ -33,6 +33,7 @@ function InfoRyus() {
   
     return (
         <div className="container-principal" >
+            
             {infoRyus.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())).sort(changeSorted).map((info , index) => {
                 const img =info.img
                 
