@@ -6,10 +6,10 @@ function Header () {
         <header>
            <div className="header">
                 <div className="buttons-header">
-                <Link className="tag is-black is-large" to="/" >Cadastro</Link>
+                <Link data-testid="register" className="tag is-black is-large" to="/" >Cadastro</Link>
                 </div>
         <div className="buttons-header">
-       <Link className="tag is-link is-large" to="/infoperson" >Personagens</Link>
+       <Link data-testid="characters" className="tag is-link is-large" to="/infoperson" >Personagens</Link>
                 </div>
        </div>
          </header>

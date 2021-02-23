@@ -39,18 +39,18 @@ function InfoRyus() {
                 
                 return (
                 
-                 <Link className="card-info" key={index} to={`/cardinfo/${info.id}`} >
+                 <Link  className="card-info" key={index} to={`/cardinfo/${info.id}`} >
                     <div key={index}  >
                         <div className="buttons-card">
                 </div>
-<div className="container-img-person" >
-                            <img hidden={info.img !== '' ? '' : 'hidden'} className="images-person"  alt="personagem" src={img} />
+                     <div className="container-img-person" >
+                            <img data-testid='card-img' hidden={info.img !== '' ? '' : 'hidden'} className="images-person"  alt="personagem" src={img} />
                             </div>
                         <div className="conteiner-name" >
-                            <h2 className="card-title" >{info.name}</h2>
+                            <h2 data-testid='card-name' className="card-title" >{info.name}</h2>
                         </div>
                         <div className="ryus-title-card">
-                            <p className={info.ryus < 0 ? 'ryus ryus-negative' : 'ryus'} >${info.ryus}</p>
+                            <p data-testid='card-ryus'  className={info.ryus < 0 ? 'ryus ryus-negative' : 'ryus'} >${info.ryus}</p>
                         </div>
                          </div>
                     </Link>
