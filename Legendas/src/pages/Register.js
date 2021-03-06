@@ -53,7 +53,7 @@ function Register () {
                 
 
             </form>
-            <button onClick={confirm}>Confirma</button>
+            <button className="confirm-button-a" onClick={confirm}>Confirma</button>
         </div>
 
     )

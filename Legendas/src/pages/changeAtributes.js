@@ -53,20 +53,20 @@ function ChangeAtributes () {
             <form>
                 <label>Atack</label>
                 <input onChange={changeAtribute} name="atack" type="number" />
-                <button onClick={confirmAtk} >Confirmar</button>
+                <button className="confirm-button-a" onClick={confirmAtk} >Confirmar</button>
                 <label>Defesa</label>
                 <input onChange={changeAtribute} name="defesa" type="number" />
-                <button onClick={confirmDefesa} >Confirmar</button>
+                <button className="confirm-button-a" onClick={confirmDefesa} >Confirmar</button>
                 <label>Agilidade</label>
                 <input onChange={changeAtribute} name="agilidade" type="number" />
-                <button onClick={confirmAg} >Confirmar</button>
+                <button className="confirm-button-a" onClick={confirmAg} >Confirmar</button>
                 <label>Chacára</label>
                 <input onChange={changeAtribute} name="chacara" type="number" />
-                <button onClick={confirmChacara} >Confirmar</button>
+                <button className="confirm-button-a" onClick={confirmChacara} >Confirmar</button>
                 <label>HP:</label>
                 
                 <input onChange={changeAtribute} name="hp" type="number" />
-                <button onClick={confirmHP} >Confirmar</button>
+                <button className="confirm-button-a" onClick={confirmHP} >Confirmar</button>
                 
                 
 

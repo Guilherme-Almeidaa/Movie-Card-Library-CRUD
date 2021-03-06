@@ -229,6 +229,13 @@ h1{
   border: black 2px  solid;
   margin-top: 0px;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+
 
 @media only screen and (max-width : 700px) { 
  
@@ -239,9 +246,29 @@ h1{
     flex-direction: column;
     background-color: rgb(194, 115, 115);
     border-radius: 15px;
-    width: 120vh;
+    width: 130vh;
   }
 
+  input {
+    height: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+   width: 110vh;
+  }
+
+  .confirm-button-a {
+    height: 100px;
+   background-color: brown;
+   
+    
+    font-size: xxx-large;
+    
+   
+    
+  }
 
   header {
   
