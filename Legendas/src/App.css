@@ -1,0 +1,280 @@
+.legends {
+  background-color: rgb(28, 192, 137);
+  width: 500px;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: x-large;
+  padding: 10px;
+  color:black;
+  border: black 2px  solid;
+  text-decoration: none;
+  
+   
+}
+
+.legends-desabled {
+  background-color: grey;
+  width: 500px;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: x-large;
+  padding: 10px;
+  color:black;
+  border: black 2px  solid;
+  text-decoration: none;
+
+}
+.conteiner-legends {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgb(194, 115, 115);
+  border-radius: 15px;
+}
+
+.link {
+ 
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgb(40, 199, 146);
+  margin: 5px;
+  border-radius: 10px;
+  color:black;
+  border: black 2px  solid;
+  
+  
+}
+
+
+.selected {
+  background-color: brown;
+  transition: 0.7s;
+  color:white;
+  border: rgb(40, 199, 146) 2px  solid;
+  font-size: x-large;
+  width: 500px;
+  border-radius: 30px;
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  
+
+}
+
+.legends:hover {
+  background-color: brown;
+  transition: 0.7s;
+  color:white;
+  border: rgb(40, 199, 146) 2px  solid;
+  width: 500px;
+}
+
+.link:hover {
+  background-color: brown;
+  transition: 0.7s;
+  color:white;
+  border: rgb(40, 199, 146) 2px  solid;
+}
+
+.container-principal {
+
+  margin: 20px;
+  
+}
+
+.links {
+ margin-top: 15px;
+}
+
+header {
+  
+  display: flex;
+  justify-content:center;
+  background-color: rgb(19, 19, 141);
+  
+  height: 50px;
+}
+
+.remaining-attributes {
+  background-color: aquamarine;
+   width: 300px;
+  
+  
+  border-radius: 30px;
+  margin: 10px;
+  font-size: medium;
+  padding: 10px;
+  color:black;
+  border: black 2px  solid;
+  text-decoration: none;
+  
+}
+
+.confirm-over-button {
+  border: transparent;
+  background-color: tomato;
+  height:50px;
+  font-size: xx-large;
+  border: black 2px  solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-over-button:hover {
+  background-color: rgb(219, 125, 109);
+  border: black 2px  solid;
+ 
+}
+
+.remaining-attributes:hover {
+  background-color: brown;
+  transition: 0.7s;
+  color:white;
+  border: rgb(40, 199, 146) 2px  solid;
+}
+
+.remaining-attributes-desabled {
+  background-color: grey;
+  width: 300px;
+  border-radius: 30px;
+  margin: 10px;
+  font-size: medium;
+  padding: 10px;
+  color:black;
+  border: black 2px  solid;
+  text-decoration: none;
+}
+
+
+
+.atributes-legends {
+  display: flex;
+  background-color: rgb(103, 169, 180);
+  border-radius: 15px;
+}
+
+
+
+.atributes-now {
+  margin: 20px;
+  display:flex;
+}
+
+.atributes-legends{
+  display: flex;
+  justify-content: space-around;
+}
+.over {
+  display: flex;
+  flex-direction: column;
+}
+/*CONTEINERS  DAS LEGENDAS  */
+
+.kunai {
+display: flex;
+flex-direction:column ;
+background-color: aquamarine;
+margin:20px;
+border-radius: 20px;
+border: black 2px  solid;
+  
+}
+.now-container {
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+  justify-content: flex-start;
+  background-color: tomato;
+  border-radius: 5px;
+  height: 80px;
+  width: 105px;
+  text-align: center;
+  border: black 2px  solid;
+  
+}
+.now {
+  margin:2px;
+}
+
+
+.defesa {
+  display: flex;
+  flex-direction:column ;
+  background-color: aquamarine;
+  margin:20px;
+  border-radius: 20px;
+  border: black 2px  solid;
+}
+h1{
+  text-align: center;
+}
+
+.ativaveis {
+  display: flex;
+  flex-direction:column ;
+  background-color: aquamarine;
+  margin:20px;
+  border-radius: 20px;
+  border: black 2px  solid;
+}
+
+.outros {
+  display: flex;
+  flex-direction:column ;
+  background-color: aquamarine;
+  justify-content: flex-start;
+  margin:20px;
+  border-radius: 20px;
+  border: black 2px  solid;
+  margin-top: 0px;
+}
+
+@media only screen and (max-width : 700px) { 
+ 
+  .conteiner-legends {
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(194, 115, 115);
+    border-radius: 15px;
+    width: 120vh;
+  }
+
+
+  header {
+  
+  display: flex;
+  justify-content:center;
+  background-color: rgb(19, 19, 141);
+  width: 120vh;
+  height: 50px;
+}
+
+
+.now-container {
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  justify-content: flex-start;
+  background-color: tomato;
+  border-radius: 5px;
+  height: 70px;
+  width: 100px;
+  text-align: center;
+  border: black 2px  solid;
+  
+}
+
+
+.atributes-legends {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(103, 169, 180);
+  border-radius: 15px;
+  width: 120vh;
+}
+
+}
