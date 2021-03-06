@@ -26,7 +26,7 @@ function InfoPerson() {
               <div className="containe-search">
                 <div className="search" >
                 <label>Pesquisa:
-                    <input className="input-search" onChange={changeSearch} type="text" />
+                    <input data-testid="search-chacteres" className="input-search" onChange={changeSearch} type="text" />
 
                 </label>
                 <button className="button is-danger is-rounded is-small" onClick={clearInfo} >Limpar</button>

@@ -125,6 +125,7 @@ body {
     margin: 10px;
     border-radius: 5px;
     width: 37%;
+    border:solid 2px rgb(122, 122, 216);
 }
 
 .title {
@@ -163,6 +164,8 @@ body {
     display: flex;
     justify-content: center;
     
+
+    
 }
 
 .form-initial {
@@ -173,6 +176,7 @@ body {
 .images-person-details {
     width: 300px;
     border-radius: 100px;
+    border:solid 2px rgb(11, 11, 15);
 }
 
 .buttons-card {
